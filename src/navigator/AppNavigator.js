@@ -1,26 +1,18 @@
 import {
   createStackNavigator,
-  createDrawerNavigator,
-  createSwitchNavigator,
+  // createDrawerNavigator,
   createAppContainer
 } from 'react-navigation';
 // Components
 // import DrawerNavigator from '../components/drawer/DrawerNavigator';
 // Screens
-import { Welcome, Another } from '../screens';
+import { Dashboard, Another } from '../screens';
 
 // Home Stack Navigator
 const AppHomeStackNavigator = createStackNavigator({
-  Welcome,
+  Dashboard,
   Another
 });
-
-// Profile Stack Navigator
-// const AppProfileStackNavigator = createStackNavigator({
-//   Profile,
-//   UserProfile,
-//   UpdateProfile
-// });
 
 // App Drawer Navigator
 // const AppDrawerNavigator = createDrawerNavigator(
@@ -42,15 +34,6 @@ const AppHomeStackNavigator = createStackNavigator({
 //     drawerToogleRoute: 'DrawerToggle'
 //   }
 // );
-
-// App Switch Navigator
-// const AppSwitchNavigator = createSwitchNavigator({
-//   Splash,
-//   AuthMethod,
-//   Signin,
-//   Signup,
-//   AppDrawerNavigator
-// });
 
 // App Container
 const AppContainer = createAppContainer(AppHomeStackNavigator);

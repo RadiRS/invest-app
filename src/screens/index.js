@@ -1,2 +1,2 @@
-export { default as Welcome } from './WelcomeScreen';
+export { default as Dashboard } from './DashboardScreen';
 export { default as Another } from './AnotherScreen';

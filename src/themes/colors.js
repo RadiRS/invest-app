@@ -13,7 +13,8 @@ const colors = {
   lightRed: '#E17476',
   lightGray: '#B7B5B7',
   darkGray: '#666A72',
-  darkBlue: '#1666C3'
+  darkBlue: '#1666C3',
+  snow: '#FFFEFF'
 };
 
 export default colors;
