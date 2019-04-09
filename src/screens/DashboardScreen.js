@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { ScrollView, StatusBar } from 'react-native';
 import styled from 'styled-components/native';
-import NavigationServices from '../navigator/NavigationServices';
 import Header from '../components/header';
 import { Colors } from '../themes';
+import Icon from '../components/icons/CustomIcon';
 
 class WelcomeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -17,15 +17,20 @@ class WelcomeScreen extends Component {
   render() {
     return (
       <Container>
-        <Text onPress={() => NavigationServices.navigate('Another')}>
-          Go to Another screen
-        </Text>
-        <ContentContainer>
-          <ScrollView>
-            <UserSection />
+        <ScrollView>
+          <UserSection>
+            <UserWrapper>
+              <Text>Welcome </Text>
+              <User>Adjie, </User>
+              <Icon name="verified" size={24} color={Colors.lightGreen} />
+            </UserWrapper>
+            <Text>Dana tersedia</Text>
+            <Dana>Rp 100.900.000</Dana>
+          </UserSection>
+          <ContentContainer>
             <InfoSection />
-          </ScrollView>
-        </ContentContainer>
+          </ContentContainer>
+        </ScrollView>
       </Container>
     );
   }
@@ -33,12 +38,41 @@ class WelcomeScreen extends Component {
 
 export default WelcomeScreen;
 
-const Container = styled.View``;
+const Container = styled.View`
+  flex: 1;
+  background-color: ${Colors.background};
+`;
 
-const Text = styled.Text``;
+const UserSection = styled.View`
+  /* height: 150px; */
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${Colors.snow};
+`;
+
+const UserWrapper = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+`;
 
 const ContentContainer = styled.View``;
 
-const UserSection = styled.View``;
-
 const InfoSection = styled.View``;
+
+const User = styled.Text`
+  font-weight: bold;
+  font-size: 22px;
+`;
+
+const Text = styled.Text`
+  font-size: 18px;
+`;
+
+const Dana = styled.Text`
+  font-size: 34px;
+  margin-bottom: 30px;
+  color: ${Colors.primary};
+`;

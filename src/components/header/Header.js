@@ -16,7 +16,7 @@ export class Header extends Component {
             <Icon name="notification-tilted" color={Colors.primary} size={30} />
           </Notification>
           <MenuBar>
-            <Icon name="humberger_menu" color={Colors.primary} size={30} />
+            <Icon name="humberger_menu" color={Colors.primary} size={40} />
           </MenuBar>
         </MenuWrapper>
       </Container>
@@ -39,6 +39,7 @@ const HeaderTitle = styled.View``;
 
 const MenuWrapper = styled.View`
   flex-direction: row;
+  align-items: center;
 `;
 
 const Notification = styled.TouchableOpacity`
