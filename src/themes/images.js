@@ -4,7 +4,7 @@
 
 // leave off @2x/@3x
 const images = {
-  // logo: require('../Images/ir.png'),
+  cover: require('../assets/Images/cover-1.jpg')
 };
 
 export default images;
