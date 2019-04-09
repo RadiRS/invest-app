@@ -17,11 +17,11 @@ What things you need to install the software
 Clone the repositori via http or ssh
 
 ```
-git clone https://github.com/RadiRS/news-app your_app_name
+git clone https://github.com/RadiRS/invest-app your_app_name
 ```
 
 ```
-git clone git@github.com:RadiRS/news-app.git your_app_name
+git clone git@github.com:RadiRS/invest-app.git your_app_name
 ```
 
 Enter into project directory and install all dependencies
@@ -40,13 +40,7 @@ npm run ios       //ios
 ### Demo
 
 <div align="center">
-  <img src="docs/01.gif"/>
-  <img src="docs/02.gif"/>
-</div>
-&nbsp;
-<div align="center">
-  <img src="docs/03.gif"/>
-  <img src="docs/04.gif"/>
+  
 </div>
 
 ## Running the tests
@@ -75,6 +69,7 @@ npm run build-android
 - [React Navigation](https://reactnavigation.org/)
 - [Redux](https://redux.js.org/)
 - [Jest](https://jestjs.io)
+- [Styled Components](https://www.styled-components.com/)
 
 ## Authors
 
