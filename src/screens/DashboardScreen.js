@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { ScrollView, StatusBar } from 'react-native';
 import styled from 'styled-components/native';
 import Header from '../components/header';
-import { Colors } from '../themes';
 import Icon from '../components/icons/CustomIcon';
+import MenuDashboard from '../components/menu';
+import { Colors } from '../themes';
 
 class WelcomeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -27,6 +28,11 @@ class WelcomeScreen extends Component {
             <Text>Dana tersedia</Text>
             <Dana>Rp 100.900.000</Dana>
           </UserSection>
+
+          <MenuSection>
+            <MenuDashboard />
+          </MenuSection>
+
           <ContentContainer>
             <InfoSection />
           </ContentContainer>
@@ -44,7 +50,6 @@ const Container = styled.View`
 `;
 
 const UserSection = styled.View`
-  /* height: 150px; */
   padding: 20px;
   align-items: center;
   justify-content: center;
@@ -58,7 +63,15 @@ const UserWrapper = styled.View`
   margin-bottom: 30px;
 `;
 
-const ContentContainer = styled.View``;
+const MenuSection = styled.View`
+  top: -30;
+  position: relative;
+  width: 100%;
+`;
+
+const ContentContainer = styled.View`
+  flex: 1;
+`;
 
 const InfoSection = styled.View``;
 

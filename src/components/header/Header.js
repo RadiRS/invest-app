@@ -31,7 +31,7 @@ const Container = styled.View`
   align-items: center;
   justify-content: space-between;
   background-color: ${Colors.snow};
-  padding: 0 20px;
+  padding: 20px 20px;
   height: ${Metrics.navBarHeight};
 `;
 
