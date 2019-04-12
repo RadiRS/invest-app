@@ -8,13 +8,14 @@ import {
   createBottomTabNavigator
 } from 'react-navigation';
 // Screens
-import { Dashboard, Another } from '../screens';
+import { Dashboard, Another, DetailMarketplace } from '../screens';
 // Colors
 const activeColor = '#4775f2';
 const inactiveColor = '#b8bece';
 
 // Home Stack Navigator
 const AppHomeStackNavigator = createStackNavigator({
+  DetailMarketplace,
   Dashboard,
   Another
 });
