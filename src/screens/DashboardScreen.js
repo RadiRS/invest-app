@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, StatusBar } from 'react-native';
+import { ScrollView, StatusBar, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import Header from '../components/header';
 import Icon from '../components/icons/CustomIcon';
@@ -48,7 +48,15 @@ class WelcomeScreen extends Component {
           </DividerSection>
 
           <MarketPlaceSection>
-            <MarketPlace />
+            <TouchableOpacity>
+              <MarketPlace />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <MarketPlace />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <MarketPlace />
+            </TouchableOpacity>
           </MarketPlaceSection>
         </ScrollView>
       </Container>
