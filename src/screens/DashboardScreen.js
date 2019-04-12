@@ -5,6 +5,7 @@ import Header from '../components/header';
 import Icon from '../components/icons/CustomIcon';
 import MenuDashboard from '../components/menu';
 import InfoDashboard from '../components/info';
+import MarketPlace from '../components/marketplace';
 import { Colors } from '../themes';
 
 class WelcomeScreen extends Component {
@@ -19,7 +20,7 @@ class WelcomeScreen extends Component {
   render() {
     return (
       <Container>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <UserSection>
             <UserWrapper>
               <Text>Welcome </Text>
@@ -40,9 +41,15 @@ class WelcomeScreen extends Component {
             <InfoDashboard />
             <InfoDashboard />
           </InfoSection>
-          {/* <ContentContainer>
-            
-          </ContentContainer> */}
+
+          <DividerSection>
+            <Border />
+            <Text>Peluang Terbaik</Text>
+          </DividerSection>
+
+          <MarketPlaceSection>
+            <MarketPlace />
+          </MarketPlaceSection>
         </ScrollView>
       </Container>
     );
@@ -76,11 +83,6 @@ const MenuSection = styled.View`
   width: 100%;
 `;
 
-// const ContentContainer = styled.View`
-//   flex: 1;
-//   background-color: red;
-// `;
-
 const InfoSection = styled.View`
   position: relative;
   top: -30;
@@ -91,6 +93,29 @@ const InfoSection = styled.View`
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: ${Colors.background};
+`;
+
+const MarketPlaceSection = styled.View`
+  position: relative;
+  top: -30;
+  flex: 1;
+  padding: 0 10px;
+  padding-top: 20px;
+`;
+
+const DividerSection = styled.View`
+  position: relative;
+  top: -20;
+  padding: 0 20px;
+  flex-direction: row;
+`;
+
+const Border = styled.View`
+  border-radius: 5px;
+  border-width: 3px;
+  background-color: ${Colors.darkBlue};
+  border-color: ${Colors.darkBlue};
+  margin-right: 10px;
 `;
 
 const User = styled.Text`
