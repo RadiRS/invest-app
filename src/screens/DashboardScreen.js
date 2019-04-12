@@ -38,10 +38,26 @@ class WelcomeScreen extends Component {
           </MenuSection>
 
           <InfoSection>
-            <InfoDashboard />
-            <InfoDashboard />
-            <InfoDashboard />
-            <InfoDashboard />
+            <InfoDashboard
+              iconName="savings"
+              labelInfo="Profit Diterima"
+              textInfo="100.000.000"
+            />
+            <InfoDashboard
+              iconName="investment-model"
+              labelInfo="Dana Teralokasi"
+              textInfo="100.000.000"
+            />
+            <InfoDashboard
+              iconName="wallet"
+              labelInfo="Nilai Akun"
+              textInfo="100.000.000"
+            />
+            <InfoDashboard
+              iconName="money"
+              labelInfo="Proyeksi Profit"
+              textInfo="100.000.000"
+            />
           </InfoSection>
 
           <DividerSection>

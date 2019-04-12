@@ -3,17 +3,21 @@ import styled from 'styled-components/native';
 import Icon from '../icons/CustomIcon';
 import { Colors } from '../../themes';
 
-const InfoDashboard = () => (
-  <Container>
-    <Cover>
-      <Icon name="savings" color={Colors.orange} size={24} />
-    </Cover>
-    <Content>
-      <LabelInfo>Profit Diterima</LabelInfo>
-      <TextInfo>Rp 100.000.000</TextInfo>
-    </Content>
-  </Container>
-);
+const InfoDashboard = props => {
+  const { iconName, labelInfo, textInfo } = props;
+
+  return (
+    <Container>
+      <Cover>
+        <Icon name={iconName} color={Colors.orange} size={24} />
+      </Cover>
+      <Content>
+        <LabelInfo>{labelInfo}</LabelInfo>
+        <TextInfo>Rp {textInfo}</TextInfo>
+      </Content>
+    </Container>
+  );
+};
 
 export default InfoDashboard;
 

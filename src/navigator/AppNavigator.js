@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Vicon from 'react-native-vector-icons/Ionicons';
 import {
   createStackNavigator,
   // createDrawerNavigator,
   createAppContainer,
   createBottomTabNavigator
 } from 'react-navigation';
+import Icon from '../components/icons/CustomIcon';
 // Screens
 import { Dashboard, Another, DetailMarketplace } from '../screens';
 // Colors
@@ -33,7 +34,7 @@ AppHomeStackNavigator.navigationOptions = ({ navigation }) => {
     tabBarVisible,
     tabBarIcon: ({ focused }) => (
       <Icon
-        name="ios-home"
+        name="house-outline"
         size={26}
         color={focused ? activeColor : inactiveColor}
       />
@@ -59,7 +60,7 @@ AppPortofolioNavigotor.navigationOptions = ({ navigation }) => {
     tabBarVisible,
     tabBarIcon: ({ focused }) => (
       <Icon
-        name="ios-briefcase"
+        name="suitcase"
         size={26}
         color={focused ? activeColor : inactiveColor}
       />
@@ -88,7 +89,7 @@ AppMainNavigator.navigationOptions = ({ navigation }) => {
       <ContainerMiddleBottomTab>
         <WrapperMiddleIcon>
           <Icon
-            name="ios-add-circle"
+            name="hand-holding-up-a-sprout"
             size={30}
             color={focused ? activeColor : inactiveColor}
           />
@@ -136,7 +137,7 @@ AppWalletNavigator.navigationOptions = ({ navigation }) => {
     tabBarVisible,
     tabBarIcon: ({ focused }) => (
       <Icon
-        name="ios-card"
+        name="wallet"
         size={26}
         color={focused ? activeColor : inactiveColor}
       />
@@ -161,7 +162,7 @@ AppAnotherNavigator.navigationOptions = ({ navigation }) => {
   return {
     tabBarVisible,
     tabBarIcon: ({ focused }) => (
-      <Icon
+      <Vicon
         name="ios-more"
         size={26}
         color={focused ? activeColor : inactiveColor}
