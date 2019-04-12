@@ -40,7 +40,7 @@ npm run ios       //ios
 ### Demo
 
 <div align="center">
-  
+  <img src="docs/01.gif"/>
 </div>
 
 ## Running the tests

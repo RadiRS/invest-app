@@ -61,6 +61,8 @@ const Cover = styled.View`
   padding: 20px;
   height: 130px;
   overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 `;
 
 const Image = styled.Image`
