@@ -4,6 +4,7 @@ import styled from 'styled-components/native';
 import Header from '../components/header';
 import Icon from '../components/icons/CustomIcon';
 import MenuDashboard from '../components/menu';
+import InfoDashboard from '../components/info';
 import { Colors } from '../themes';
 
 class WelcomeScreen extends Component {
@@ -33,9 +34,15 @@ class WelcomeScreen extends Component {
             <MenuDashboard />
           </MenuSection>
 
-          <ContentContainer>
-            <InfoSection />
-          </ContentContainer>
+          <InfoSection>
+            <InfoDashboard />
+            <InfoDashboard />
+            <InfoDashboard />
+            <InfoDashboard />
+          </InfoSection>
+          {/* <ContentContainer>
+            
+          </ContentContainer> */}
         </ScrollView>
       </Container>
     );
@@ -49,18 +56,18 @@ const Container = styled.View`
   background-color: ${Colors.background};
 `;
 
-const UserSection = styled.View`
-  padding: 20px;
-  align-items: center;
-  justify-content: center;
-  background-color: ${Colors.snow};
-`;
-
 const UserWrapper = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+`;
+
+const UserSection = styled.View`
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${Colors.snow};
 `;
 
 const MenuSection = styled.View`
@@ -69,11 +76,22 @@ const MenuSection = styled.View`
   width: 100%;
 `;
 
-const ContentContainer = styled.View`
-  flex: 1;
-`;
+// const ContentContainer = styled.View`
+//   flex: 1;
+//   background-color: red;
+// `;
 
-const InfoSection = styled.View``;
+const InfoSection = styled.View`
+  position: relative;
+  top: -30;
+  flex: 1;
+  padding: 0 10px;
+  padding-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: ${Colors.background};
+`;
 
 const User = styled.Text`
   font-weight: bold;
