@@ -15,8 +15,8 @@ const inactiveColor = '#b8bece';
 
 // Home Stack Navigator
 const AppHomeStackNavigator = createStackNavigator({
-  DetailMarketplace,
   Dashboard,
+  DetailMarketplace,
   Another
 });
 
@@ -25,7 +25,7 @@ AppHomeStackNavigator.navigationOptions = ({ navigation }) => {
 
   const routeName = navigation.state.routes[navigation.state.index].routeName;
 
-  if (routeName === 'DetailOverview') {
+  if (routeName === 'DetailMarketplace') {
     tabBarVisible = false;
   }
 
@@ -51,7 +51,7 @@ AppPortofolioNavigotor.navigationOptions = ({ navigation }) => {
 
   const routeName = navigation.state.routes[navigation.state.index].routeName;
 
-  if (routeName === 'DetailOverview') {
+  if (routeName === 'DetailMarketplace') {
     tabBarVisible = false;
   }
 
@@ -77,7 +77,7 @@ AppMainNavigator.navigationOptions = ({ navigation }) => {
 
   const routeName = navigation.state.routes[navigation.state.index].routeName;
 
-  if (routeName === 'DetailOverview') {
+  if (routeName === 'DetailMarketplace') {
     tabBarVisible = false;
   }
 
@@ -128,7 +128,7 @@ AppWalletNavigator.navigationOptions = ({ navigation }) => {
 
   const routeName = navigation.state.routes[navigation.state.index].routeName;
 
-  if (routeName === 'DetailOverview') {
+  if (routeName === 'DetailMarketplace') {
     tabBarVisible = false;
   }
 
@@ -154,7 +154,7 @@ AppAnotherNavigator.navigationOptions = ({ navigation }) => {
 
   const routeName = navigation.state.routes[navigation.state.index].routeName;
 
-  if (routeName === 'DetailOverview') {
+  if (routeName === 'DetailMarketplace') {
     tabBarVisible = false;
   }
 

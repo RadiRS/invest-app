@@ -18,6 +18,8 @@ class WelcomeScreen extends Component {
   }
 
   render() {
+    const { navigation } = this.props;
+
     return (
       <Container>
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -48,13 +50,19 @@ class WelcomeScreen extends Component {
           </DividerSection>
 
           <MarketPlaceSection>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('DetailMarketplace')}
+            >
               <MarketPlace />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('DetailMarketplace')}
+            >
               <MarketPlace />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('DetailMarketplace')}
+            >
               <MarketPlace />
             </TouchableOpacity>
           </MarketPlaceSection>

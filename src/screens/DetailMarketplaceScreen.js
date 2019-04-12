@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { Colors } from '../themes';
 import Marketplace from '../components/marketplace';
 import DetailBorrow from '../components/detailmarketplace/DetailBorrow';
@@ -9,7 +10,21 @@ import DetailHistory from '../components/detailmarketplace/DetailHistory';
 
 class DetailMarketplaceScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
-    // header: null
+    title: 'Microsoft Office 2019',
+    headerTitleStyle: {
+      color: Colors.primary
+    },
+    headerTitleContainerStyle: {
+      marginLeft: -20
+    },
+    headerLeft: (
+      <TouchableOpacity onPress={() => navigation.goBack()}>
+        <Icon name="md-arrow-round-back" size={24} color={Colors.primary} />
+      </TouchableOpacity>
+    ),
+    headerLeftContainerStyle: {
+      paddingLeft: 20
+    }
   });
 
   state = {
@@ -79,6 +94,12 @@ class DetailMarketplaceScreen extends Component {
 
           <DetailInfoSection>{this.renderDetailInfo()}</DetailInfoSection>
         </ScrollView>
+
+        <Footer>
+          <Button>
+            <LabelButton>Beri Pendanaan</LabelButton>
+          </Button>
+        </Footer>
       </Container>
     );
   }
@@ -94,6 +115,7 @@ const Container = styled.View`
 const MarketPlaceSection = styled.View`
   flex: 1;
   margin: 0 -10px;
+  margin-top: 20px;
 `;
 
 const MenuSection = styled.View`
@@ -112,4 +134,30 @@ const LabelMenu = styled.Text`
   font-size: 20px;
 `;
 
-const DetailInfoSection = styled.View``;
+const DetailInfoSection = styled.View`
+  margin-bottom: 130px;
+`;
+
+const Footer = styled.View`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  border-top-width: 2px;
+  border-top-color: ${Colors.background};
+  background-color: ${Colors.snow};
+`;
+
+const Button = styled.TouchableOpacity`
+  padding: 20px;
+  border-radius: 5px;
+  background-color: ${Colors.primary};
+  justify-content: center;
+  align-items: center;
+`;
+
+const LabelButton = styled.Text`
+  font-size: 20px;
+  color: ${Colors.snow};
+`;

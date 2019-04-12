@@ -59,7 +59,7 @@ const Container = styled.View`
 
 const Cover = styled.View`
   padding: 20px;
-  height: 130px;
+  height: 200px;
   overflow: hidden;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
