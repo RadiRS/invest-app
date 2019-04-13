@@ -3,16 +3,20 @@ import styled from 'styled-components';
 import Vicon from 'react-native-vector-icons/Ionicons';
 import {
   createStackNavigator,
-  // createDrawerNavigator,
+  createDrawerNavigator,
   createAppContainer,
-  createBottomTabNavigator
+  createBottomTabNavigator,
+  createSwitchNavigator
 } from 'react-navigation';
+// Componnents
 import Icon from '../components/icons/CustomIcon';
+import Drawer from '../components/drawer';
 // Screens
 import { Dashboard, Another, DetailMarketplace } from '../screens';
+import { Metrics, Colors } from '../themes';
 // Colors
-const activeColor = '#4775f2';
-const inactiveColor = '#b8bece';
+const activeColor = Colors.primary;
+const inactiveColor = Colors.lightGray;
 
 // Home Stack Navigator
 const AppHomeStackNavigator = createStackNavigator({
@@ -91,7 +95,7 @@ AppMainNavigator.navigationOptions = ({ navigation }) => {
           <Icon
             name="hand-holding-up-a-sprout"
             size={30}
-            color={focused ? activeColor : inactiveColor}
+            color={focused ? activeColor : Colors.snow}
           />
         </WrapperMiddleIcon>
       </ContainerMiddleBottomTab>
@@ -180,27 +184,29 @@ const AppBottomNavigator = createBottomTabNavigator({
 });
 
 // App Drawer Navigator
-// const AppDrawerNavigator = createDrawerNavigator(
-//   {
-//     Home: {
-//       screen: AppHomeStackNavigator
-//     },
-//     Profile: {
-//       screen: AppProfileStackNavigator
-//     }
-//   },
-//   {
-//     drawerPosition: 'left',
-//     drawerType: 'slide',
-//     drawerWidth: 400,
-//     contentComponent: DrawerNavigator,
-//     drawerOpenRoute: 'DrawerOpen',
-//     drawerCloseRoute: 'DrawerClose',
-//     drawerToogleRoute: 'DrawerToggle'
-//   }
-// );
+const AppDrawerNavigator = createDrawerNavigator(
+  {
+    Home: {
+      screen: AppBottomNavigator
+      // screen: Drawer
+    }
+  },
+  {
+    drawerPosition: 'right',
+    drawerType: 'front',
+    drawerWidth: Metrics.screenWidth,
+    contentComponent: ({ navigation }) => <Drawer navigation={navigation} />,
+    drawerOpenRoute: 'DrawerOpen',
+    drawerCloseRoute: 'DrawerClose',
+    drawerToogleRoute: 'DrawerToggle'
+  }
+);
+
+const AppSwitchNavigator = createSwitchNavigator({
+  AppDrawerNavigator
+});
 
 // App Container
-const AppContainer = createAppContainer(AppBottomNavigator);
+const AppContainer = createAppContainer(AppSwitchNavigator);
 
 export default AppContainer;

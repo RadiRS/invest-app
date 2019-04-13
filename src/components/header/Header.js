@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { DrawerActions } from 'react-navigation';
 import styled from 'styled-components';
 import Icon from '../icons/CustomIcon';
 import { Colors, Metrics } from '../../themes';
@@ -6,6 +7,8 @@ import Logo from '../logo';
 
 export class Header extends Component {
   render() {
+    const { navigation } = this.props;
+
     return (
       <Container>
         <HeaderTitle>
@@ -15,7 +18,9 @@ export class Header extends Component {
           <Notification onPress={() => alert('Notif')}>
             <Icon name="notification-tilted" color={Colors.primary} size={30} />
           </Notification>
-          <MenuBar>
+          <MenuBar
+            onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+          >
             <Icon name="humberger_menu" color={Colors.primary} size={40} />
           </MenuBar>
         </MenuWrapper>

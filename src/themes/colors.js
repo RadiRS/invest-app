@@ -6,12 +6,14 @@
  */
 
 const colors = {
+  transparent: 'rgba(0,0,0,0)',
   background: '#F4F4F9',
   primary: '#1C77E3',
   orange: '#FFAB25',
   lightGreen: '#A7D361',
   lightRed: '#E17476',
   lightGray: '#B7B5B7',
+  lightBlue: '#186FD5',
   darkGray: '#666A72',
   darkBlue: '#1666C3',
   snow: '#FFFEFF'
