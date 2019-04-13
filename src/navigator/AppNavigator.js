@@ -188,10 +188,10 @@ const AppDrawerNavigator = createDrawerNavigator(
   {
     Home: {
       screen: AppBottomNavigator
-      // screen: Drawer
     }
   },
   {
+    drawerBackgroundColor: Colors.transparent,
     drawerPosition: 'right',
     drawerType: 'front',
     drawerWidth: Metrics.screenWidth,
