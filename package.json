@@ -15,7 +15,7 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.2",
     "react": "16.6.3",
     "react-native": "0.70.3",
     "react-native-gesture-handler": "^1.1.0",
